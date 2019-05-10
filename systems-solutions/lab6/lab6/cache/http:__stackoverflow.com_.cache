@@ -1,0 +1,21 @@
+HTTP/1.0 301 Moved Permanently
+Content-Type: text/html; charset=utf-8
+Location: https://stackoverflow.com/
+X-Request-Guid: e142860d-67c6-4934-9c8e-1ec30ddb4bdc
+Content-Security-Policy: upgrade-insecure-requests
+Content-Length: 143
+Accept-Ranges: bytes
+Date: Fri, 07 Dec 2018 08:06:40 GMT
+Via: 1.1 varnish
+Connection: close
+X-Served-By: cache-mdw17367-MDW
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1544170000.198737,VS0,VE55
+Vary: Fastly-SSL
+X-DNS-Prefetch-Control: off
+Set-Cookie: prov=98048a37-8062-0f71-46f1-dccb3b65c94f; domain=.stackoverflow.com; expires=Fri, 01-Jan-2055 00:00:00 GMT; path=/; HttpOnly
+
+<html><head><title>Object moved</title></head><body>
+<h2>Object moved to <a href="https://stackoverflow.com/">here</a>.</h2>
+</body></html>

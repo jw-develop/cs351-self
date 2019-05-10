@@ -1,0 +1,9 @@
+HTTP/1.0 302 Found
+Vary: Accept-Encoding
+Location: https://facebook.com/
+Content-Type: text/html; charset="utf-8"
+X-FB-Debug: eI+Ory8PwMk1XcKbNEkjJxXGtq/8hwMuX8UQX1SewnpJibw3cnoatnl5dzRcysV3SETSOq29MfYDoj6YuNX6Gw==
+Date: Fri, 07 Dec 2018 08:03:18 GMT
+Connection: close
+Content-Length: 0
+

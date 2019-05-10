@@ -1,0 +1,5 @@
+alias r='make clean; make; ./proxy'
+alias e='vi proxy.c'
+alias m='make'
+alias a='make clean; make'
+alias c='echo "GET http://www.wheaton.edu/TowerTalks/Schedule HTTP/1.1" | nc localhost '

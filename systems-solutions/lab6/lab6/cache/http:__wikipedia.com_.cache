@@ -1,0 +1,29 @@
+HTTP/1.0 301 Moved Permanently
+Date: Thu, 06 Dec 2018 20:10:45 GMT
+Server: mw1240.eqiad.wmnet
+Location: http://www.wikipedia.org/
+Cache-Control: max-age=2592000
+Expires: Sat, 05 Jan 2019 20:10:45 GMT
+Content-Length: 233
+Content-Type: text/html; charset=iso-8859-1
+Vary: X-Forwarded-Proto
+X-Varnish: 628313432 920558053, 797710886 737566643
+Via: 1.1 varnish (Varnish/5.1), 1.1 varnish (Varnish/5.1)
+Age: 42997
+X-Cache: cp1079 hit/2, cp1087 hit/1311
+X-Cache-Status: hit-front
+Server-Timing: cache;desc="hit-front"
+Set-Cookie: WMF-Last-Access=07-Dec-2018;Path=/;HttpOnly;secure;Expires=Tue, 08 Jan 2019 00:00:00 GMT
+Set-Cookie: WMF-Last-Access-Global=07-Dec-2018;Path=/;Domain=.wikipedia.com;HttpOnly;secure;Expires=Tue, 08 Jan 2019 00:00:00 GMT
+X-Analytics: nocookies=1
+X-Client-IP: 209.147.100.17
+Set-Cookie: GeoIP=US:IL:Wheaton:41.87:-88.11:v4; Path=/; secure; Domain=.wikipedia.com
+Connection: close
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.wikipedia.org/">here</a>.</p>
+</body></html>
