@@ -1,0 +1,2 @@
+alias b='rm btest; make btest; ./btest'
+alias d='git commit -m "save" bits.c; ./driver.pl -u "John Charles"'
