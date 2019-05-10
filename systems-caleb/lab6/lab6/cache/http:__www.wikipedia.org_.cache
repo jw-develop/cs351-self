@@ -1,0 +1,14 @@
+HTTP/1.0 301 TLS Redirect
+Date: Fri, 07 Dec 2018 08:07:34 GMT
+Server: Varnish
+X-Varnish: 795832202
+X-Cache: cp1087 int
+X-Cache-Status: int-front
+Server-Timing: cache;desc="int-front"
+Set-Cookie: WMF-Last-Access=07-Dec-2018;Path=/;HttpOnly;secure;Expires=Tue, 08 Jan 2019 00:00:00 GMT
+Set-Cookie: WMF-Last-Access-Global=07-Dec-2018;Path=/;Domain=.wikipedia.org;HttpOnly;secure;Expires=Tue, 08 Jan 2019 00:00:00 GMT
+X-Client-IP: 209.147.100.17
+Location: https://www.wikipedia.org/
+Content-Length: 0
+Connection: close
+

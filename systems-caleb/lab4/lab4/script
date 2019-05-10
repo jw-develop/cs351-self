@@ -1,0 +1,9 @@
+#!/bin/bash
+make 
+for i in {01..16}
+do
+    ./sdriver.pl -t trace${i}.txt -s ./tsh -a "-p" > file1
+    ./sdriver.pl -t trace${i}.txt -s ./tshref -a "-p" > file2
+    diff file1 file2
+done
+rm file1 file2 

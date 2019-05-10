@@ -1,0 +1,63 @@
+./sdriver.pl -t trace13.txt -s ./tshref -a "-p"
+#
+# trace13.txt - Restart every stopped process in process group
+#
+tsh> ./mysplit 4
+Job [1] (31324) stopped by signal 20
+tsh> jobs
+[1] (31324) Stopped ./mysplit 4 
+tsh> /bin/ps a
+  PID TTY      STAT   TIME COMMAND
+  828 pts/1    Ss     0:00 bash
+11241 tty1     Ssl+   4:04 /usr/bin/Xorg :0 -background none -noreset -audit 4 -verbose -auth /run/gdm/auth-for-gdm-90roC5/database -seat seat0 -nolisten tcp vt1
+11693 tty2     Ss+    0:00 /sbin/agetty --noclear tty2 linux
+11702 tty4     Ss+    0:00 /sbin/agetty --noclear tty4 linux
+11710 tty3     Ss+    0:00 /sbin/agetty --noclear tty3 linux
+11711 tty5     Ss+    0:00 /sbin/agetty --noclear tty5 linux
+11712 tty6     Ss+    0:00 /sbin/agetty --noclear tty6 linux
+11819 pts/0    Ss+    0:00 bash
+12089 pts/2    Ss     0:00 bash
+12092 pts/2    S+     0:00 ssh cslab17
+21042 pts/1    S      0:00 ./tsh -p
+30848 pts/1    S      0:00 ./tsh -p
+30849 pts/1    Z      0:00 [echo] <defunct>
+30955 pts/1    S      0:00 ./tsh -p
+30956 pts/1    Z      0:00 [echo] <defunct>
+30960 pts/1    S      0:00 ./tsh -p
+30961 pts/1    Z      0:00 [echo] <defunct>
+31015 pts/1    S      0:00 ./tsh -p
+31016 pts/1    Z      0:00 [echo] <defunct>
+31107 pts/1    S+     0:00 /bin/bash ./eval.sh
+31320 pts/1    S+     0:00 make rtest13
+31321 pts/1    S+     0:00 /usr/bin/perl ./sdriver.pl -t trace13.txt -s ./tshref -a -p
+31322 pts/1    S+     0:00 ./tshref -p
+31324 pts/1    T      0:00 ./mysplit 4
+31325 pts/1    T      0:00 ./mysplit 4
+31328 pts/1    R      0:00 /bin/ps a
+tsh> fg %1
+tsh> /bin/ps a
+  PID TTY      STAT   TIME COMMAND
+  828 pts/1    Ss     0:00 bash
+11241 tty1     Ssl+   4:04 /usr/bin/Xorg :0 -background none -noreset -audit 4 -verbose -auth /run/gdm/auth-for-gdm-90roC5/database -seat seat0 -nolisten tcp vt1
+11693 tty2     Ss+    0:00 /sbin/agetty --noclear tty2 linux
+11702 tty4     Ss+    0:00 /sbin/agetty --noclear tty4 linux
+11710 tty3     Ss+    0:00 /sbin/agetty --noclear tty3 linux
+11711 tty5     Ss+    0:00 /sbin/agetty --noclear tty5 linux
+11712 tty6     Ss+    0:00 /sbin/agetty --noclear tty6 linux
+11819 pts/0    Ss+    0:00 bash
+12089 pts/2    Ss     0:00 bash
+12092 pts/2    S+     0:00 ssh cslab17
+21042 pts/1    S      0:00 ./tsh -p
+30848 pts/1    S      0:00 ./tsh -p
+30849 pts/1    Z      0:00 [echo] <defunct>
+30955 pts/1    S      0:00 ./tsh -p
+30956 pts/1    Z      0:00 [echo] <defunct>
+30960 pts/1    S      0:00 ./tsh -p
+30961 pts/1    Z      0:00 [echo] <defunct>
+31015 pts/1    S      0:00 ./tsh -p
+31016 pts/1    Z      0:00 [echo] <defunct>
+31107 pts/1    S+     0:00 /bin/bash ./eval.sh
+31320 pts/1    S+     0:00 make rtest13
+31321 pts/1    S+     0:00 /usr/bin/perl ./sdriver.pl -t trace13.txt -s ./tshref -a -p
+31322 pts/1    S+     0:00 ./tshref -p
+31331 pts/1    R      0:00 /bin/ps a

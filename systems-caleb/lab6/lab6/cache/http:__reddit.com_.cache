@@ -1,0 +1,15 @@
+HTTP/1.0 301 Moved Permanently
+Retry-After: 0
+Location: https://www.reddit.com/
+Content-Length: 0
+Accept-Ranges: bytes
+Date: Fri, 07 Dec 2018 08:05:16 GMT
+Via: 1.1 varnish
+Connection: close
+X-Served-By: cache-mdw17356-MDW
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1544169917.818779,VS0,VE0
+Cache-Control: private, max-age=3600
+Server: snooserv
+

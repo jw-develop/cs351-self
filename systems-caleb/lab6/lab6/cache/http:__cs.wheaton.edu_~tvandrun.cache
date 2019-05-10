@@ -1,0 +1,15 @@
+HTTP/1.0 301 Moved Permanently
+Date: Fri, 07 Dec 2018 08:00:48 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+Location: http://cs.wheaton.edu/~tvandrun/
+Content-Length: 240
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://cs.wheaton.edu/~tvandrun/">here</a>.</p>
+</body></html>

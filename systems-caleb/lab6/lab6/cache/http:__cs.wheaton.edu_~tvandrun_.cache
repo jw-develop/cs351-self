@@ -1,0 +1,161 @@
+HTTP/1.0 200 OK
+Date: Fri, 07 Dec 2018 08:02:18 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+Last-Modified: Mon, 10 Sep 2018 15:12:52 GMT
+ETag: "1847-57585ca8dd4a0"
+Accept-Ranges: bytes
+Content-Length: 6215
+Connection: close
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Thomas VanDrunen</title>
+  </head>
+
+  <body>
+
+<table border=1 cellpadding=1 cols=6 width=100%>
+<tr><td colspan=4>
+<font size=+3> Thomas John VanDrunen </font><br>
+Dept of Mathematics and Computer Science <br>
+Wheaton College (IL)
+</td colspan=2>
+<td>
+Science Building 163 <br>
+Office phone: 630 752 5692 <br>
+email:
+<a href="mailto:Thomas.VanDrunen@wheaton.edu">
+Thomas.VanDrunen@wheaton.edu</a>
+</td>
+</tr>
+<tr>
+<td colspan=6>
+
+<h2>Teaching (Fall 2018):</h2> <br>
+
+
+<a href="cs243">CSCI/MATH 243. Discrete Mathematics and Functional Programming.</a> MWF 2:15-3:25 pm. <br>
+<a href="cs445">CSCI 445. Analysis of Algorithms.</a> MWF 12:55-2:05 pm.
+<br>
+<br>
+
+
+
+
+
+<br>
+<a href="previous/previous.html">
+Teaching from previous semesters</a><br>
+<br>
+<a href="http://cs.wheaton.edu/~tvandrun/inventory">Inventory
+of practice problems for Programming I and II</a><br>
+
+<br>
+Office hours: MWF 3:30-4:30 pm; Th 9:00-10:30 am, 11:15-11:45, and 
+1:15-3:15 pm.
+</td>
+</tr>
+</table>
+<br>
+<br>
+<a href="dmfp"><img src="DMFP-thumb.jpg"></a>
+<a href="dmfp"><i>Discrete Mathematics and Functional Programming</i></a>, available August 2012 from Franklin, Beedle and Associates.
+<br><br>
+
+<u><i>Bio:</i></u><br>
+I am an associate professor of 
+<a href="http://www.wheaton.edu/academics/programs/computerscience/i">Computer Science</a>
+at <a href="http://www.wheaton.edu">Wheaton College (IL)</a>, having started
+in the fall semester of 2004. 
+I did my graduate work in 
+<a href="http://www.cs.purdue.edu">Computer Science</a>
+at <a href="http://www.purdue.edu">Purdue University<a>,
+earning my M.S. in 2000 and my Ph.D. in 2004.
+I graduated with a B.S. in mathematics and computer science
+from <a href="http://www.calvin.edu">Calvin College</a> in 1998.<br> <br>
+<a href="thomas-vandrunen-cv.pdf">My curriculum vitae</a>
+<br><br><br><br>
+<u><i>Teaching and educational interests:</i></u><br>
+Discrete mathematics <br>
+Programming, design patterns <br>
+Programming languages and language systems <br>
+The priority of interface implementation over class extension in CS 1 
+<br><br><br><br>
+<u><i>Research interests:</i></u><br>
+Computational linguistics and natural language processing (a new direction for me)<br>
+Compiler development tools<br>
+Hybrid programming languages (particularly straddling object-oriented and 
+functional paradigms) <br>
+Compiler optimization <br>
+<br><br><br><br>
+<u><i>Writings:</i></u><br>
+"Functional Programming as a Discrete Mathematics Topic,"
+in <a href="https://inroads.acm.org/">ACM Inroads</a>,
+8(2):51-58, June 2017.<br><br>
+
+<i>Discrete Mathematics and Functional Programming</i>.
+<a href="http://www.fbeedle.com">Franklin, Beedle and Associates</a>,
+2012. 
+<a href="dmfp">supplemental materials</a><br><br>
+
+"The Case for Teaching Functional Programming in
+Discrete Math," <a href="http://splashcon.org/2011/">SPLASH 2011</a> <a href="http://splashcon.org/2011/program/educators-and-trainers-symposium">Educators' and Trainers' Symposium</a>. <a href="writings/edsy01v-vandrunen.pdf">pdf</a><br><br>
+"A Christian Analysis of Gabriel's 'Mob Software,'" <a href="http://www.acmsonline.org/journal/index.html">Journal of the ACMS</a>, 2010-2011 issue.  <a href="http://acmsonline.org/home2/a-christian-analysis-of-gabriels-mob-software/">html abstract with link to pdf</a>.<br><br>
+"Java Interfaces in CS 1 Textbooks," 
+<a href="http://www.oopsla.org/2006/">OOPLSA 2006</a> 
+<a href="http://www.oopsla.org/2006/submission/educators_symposium/introduction_to_the_educators_symposium.html">Educator's Symposium</a>.
+<a href="oopslaES02-vandrunen.ps">ps</a> 
+<a href="oopslaES02-vandrunen.pdf">pdf</a> <br><br>
+"Anticipation-Based Partial Redundancy Elimination for
+Static Single Assignment Form," </a> with A. L. Hosking, 
+<a href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-SPE.html">
+Software--Practice & Experience </a>, 34(15).
+<a href="writings/spessapre.pdf">pdf </a>. 
+<a href="writings/assapre-errata.html">Errata</a><br><br>
+<i>Partial Redundancy Elimination for Global Value Numbering,</i>
+my dissertation. <a href="writings/thesis.pdf">pdf</a> 
+<a href="writings/dissertation-errata.html">Errata</a><br><br>
+
+"Value-Based Partial Redundancy Elimination," with A. L. Hosking,
+in the Proceedings of <a href="http://www.research.ibm.com/CC2004/home.html">
+The13th International Conference on Compiler Construction (CC) </a>,  
+Barcelona, Spain, April 2004.<a href="writings/cc04.pdf">pdf</a>.
+<a href="writings/gvnpre-errata.html">Errata</a><br><br>
+"Visitor-Oriented Programming," with J. Palsberg, presented at
+<a href="http://www.cis.upenn.edu/~bcpierce/FOOL/FOOL11.html">
+The 11th International Workshop on Foundations of Object-Oriented Languages (FOOL)
+</a>, Venice, Italy,
+January 18, 2004. <a href="writings/fool.pdf">pdf</a><br><br>
+"Corner Cases in Value-Based Partial Redundancy Elimination," 
+with A. L. Hosking, CSD-TR # 03-032 at Purdue University. 
+<a href="writings/tech03032.ps">ps </a>
+<br><br><br><br>
+<u><i>Non-CS thinkers who have influenced me:</i></u><br>
+(Not an endorsement of all their ideas or opinions.)<br>
+<a href="http://en.wikipedia.org/wiki/Geerhardus_Vos">Geerhardus Vos</a>,
+the father of Reformed biblical theology, author
+of <i>Biblical Theology: Old and New Testaments</i>.<br>
+<a href="http://en.wikipedia.org/wiki/Christopher_Alexander">Christopher Alexander</a>,
+architect (who, in an interesting cross-over of ideas, 
+has heavily influenced software engineering), author of 
+<i>The Timeless Way of Building</i> and <i>A Pattern Language</i>.<br>
+<a href="http://en.wikipedia.org/wiki/Joseph_Campbell">Joseph Campbell</a>,
+comparative mythologist and author of <i>The Hero with a Thousand Faces</i>.<br>
+<a href="http://www.edwardtufte.com/tufte/">Edward Tufte</a>,
+expert on information graphics and design, author of <i>The Visual
+Display of Quantitative Information</i> and related books.
+
+
+
+<br>
+
+    <hr>
+    <address><a href="mailto:Thomas.VanDrunen@wheaton.edu">Thomas VanDrunen</a></address>
+<!-- Created: Tue Aug 10 11:13:03 CDT 2004 -->
+<!-- hhmts start -->
+Last modified: Mon Sep 10 10:12:52 CDT 2018
+<!-- hhmts end -->
+  </body>
+</html>

@@ -1,0 +1,169 @@
+#include <assert.h>
+#include <stdio.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include "csapp.h"
+#include "clienthandler.h"
+#include "debug.h"
+
+/* function definitions */
+void clienterror(int fd, char *cause, char *errnum,
+         char *shortmsg, char *longmsg);
+
+
+/* 
+ * handles a connection from a client
+ *
+ * precondition: clientfd is a valid connection from a client
+ * postcondition: clientfd is closed
+ */
+void handleconnection(const int clientfd, const SA clientaddr) {
+    /* the hostname of the connected client */
+    char clienthostname[MAXLINE];
+    /* the port of the connected client */
+    char clientport[MAXLINE];
+    /* the request line */
+    char request[MAXLINE];
+    /* the elements of the request */ 
+    char method[MAXLINE], uri[MAXLINE], version[MAXLINE];
+    /* the elements of the URI */
+    char server[MAXLINE], path[MAXLINE];
+    /* loop iteration variable */
+    int i;
+    /* loop guard variable */
+    int length;
+    /* the read buffer */
+    rio_t rio;
+   
+    assert(clientfd > 2);
+    /* get information about the client */
+    Getnameinfo((SA *) &clientaddr, sizeof(clientaddr), clienthostname,
+            MAXLINE, clientport, MAXLINE, 0);
+    debug("connected to %s:%s\n", clienthostname, clientport);
+
+    /* initialize input buffer */
+    Rio_readinitb(&rio, clientfd);
+
+    /* read the request line */
+    Rio_readlineb(&rio, request, MAXLINE);
+    debug("request line: %s", request);
+    /* extract the method, uri and version from the request */
+    if (sscanf(request, "%s %s %s \r\n", method, uri, version) != 3) {
+        debug("bad request, exiting handleconection\n");
+        clienterror(clientfd, request, "400", "Bad Request", 
+                "bad request");
+        return;
+    }
+
+    debug("method: %s uri: %s version: %s\n", method, uri, version);
+    
+    /* ensure the request is valid */
+    /* check that the uri is valid */
+    if (!strcasecmp(uri, "")){
+        debug("empty uri, exiting handleconection\n");
+        clienterror(clientfd, request, "400", "Bad Request", 
+                "uri empty in request");
+        return;
+    }
+    /* check that the method is correct */
+    if (strcasecmp(method, "GET")) {
+        debug("bad method, exiting handleconection\n");
+        clienterror(clientfd, method, "501", "Not Implemented", 
+                "This proxy only accepts GET requests, not requests of type");
+        return;
+    }
+    /* check that the version is correct */
+    if (strcasecmp(version, "HTTP/1.0") && strcasecmp(version, "HTTP/1.1")) {
+        debug("bad version, exiting handleconection\n");
+        clienterror(clientfd, request, "400", "Bad Request", 
+                "HTTP version not recognized in request");
+        return;
+    }
+    /* extract the server and the path from the URI */ 
+    if (sscanf(uri, "http://%[^/]/%s", server, path) != 2) {
+        debug("bad uri in request, exiting handleconection\n");
+        clienterror(clientfd, request, "400", "Bad Request", 
+                "bad uri in request");
+        return;
+    }
+    debug("server: %s, path: %s\n", server, path);
+    /* add the / back to the start of the path by shifting everything over */
+    /* this is safe since the the original path had the / and did not exceed MAXLINE */ 
+    length = strlen(path);
+    assert(length < MAXLINE);
+    for (i = length; i > 0 ; i--) {
+        path[i] = path[i-1];
+    } 
+    path[0] = '/';
+    debug("server: %s, path: %s\n", server, path);
+    
+    /* get a response from the server */
+
+
+
+
+
+
+    
+
+    /* open a connection to the server we will forward the request to */
+
+
+
+    Close(clientfd);
+}
+/* gets the response from the server given the address 
+ * of the server and the path to a resource in the
+ * server.
+ *
+ * return NULL on error
+ */
+char* getresponse(char* server, char* path) {
+     /* the address structure for the server */
+    SA addr;
+    /* the file descriptor of the socket to be used for the connection */
+    int fd;
+    /* wipe structure for safety */
+    memset(&addr, 0, sizeof(addr));
+    /* fill in the structure */
+    addr.sin_family = AF_INET;
+    addr.sin_port = htons(PORT);
+    inet_aton(server, &addr.sin_addr);
+
+    /* create the socket */
+    fd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    if (fd < 0) {
+        debug("error creating socket from proxy to server");
+        return NULL;
+    }
+    
+}
+
+/*
+ * copied from TINY server
+ * clienterror - returns an error message to the client
+ * 
+ */
+/* $begin clienterror */
+void clienterror(int fd, char *cause, char *errnum,
+         char *shortmsg, char *longmsg)
+{
+    char buf[MAXLINE], body[MAXBUF];
+
+    /* Build the HTTP response body */
+    sprintf(body, "<html><title>Tiny Error</title>");
+    sprintf(body, "%s<body bgcolor=""ffffff"">\r\n", body);
+    sprintf(body, "%s%s: %s\r\n", body, errnum, shortmsg);
+    sprintf(body, "%s<p>%s: %s\r\n", body, longmsg, cause);
+    sprintf(body, "%s<hr><em>The Tiny Web server</em>\r\n", body);
+
+    /* Print the HTTP response */
+    sprintf(buf, "HTTP/1.0 %s %s\r\n", errnum, shortmsg);
+    Rio_writen(fd, buf, strlen(buf));
+    sprintf(buf, "Content-type: text/html\r\n");
+    Rio_writen(fd, buf, strlen(buf));
+    sprintf(buf, "Content-length: %d\r\n\r\n", (int)strlen(body));
+    Rio_writen(fd, buf, strlen(buf));
+    Rio_writen(fd, body, strlen(body));
+}
+/* $end clienterror */

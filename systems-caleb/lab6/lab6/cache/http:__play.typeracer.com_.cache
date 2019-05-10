@@ -1,0 +1,6 @@
+HTTP/1.0 301 
+Location: https://play.typeracer.com/
+Content-Length: 0
+Date: Fri, 07 Dec 2018 08:05:08 GMT
+Connection: close
+
